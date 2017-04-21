@@ -1,0 +1,3166 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a>csshint (v0.3.3)</a>
+</h1>
+<h4>lint your css code</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.csshint">module csshint</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.check">
+            function <span class="apidocSignatureSpan">csshint.</span>check
+            <span class="apidocSignatureSpan">(file, errors, done)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.checkString">
+            function <span class="apidocSignatureSpan">csshint.</span>checkString
+            <span class="apidocSignatureSpan">(fileContent, filePath)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">csshint.</span>adjoining_classes</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">csshint.</span>always_semicolon</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">csshint.</span>block_indent</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">csshint.</span>box_model</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">csshint.</span>box_sizing</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">csshint.</span>bulletproof_font_face</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">csshint.</span>cli</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">csshint.</span>config</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">csshint.</span>disallow_expression</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">csshint.</span>disallow_important</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">csshint.</span>disallow_named_color</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">csshint.</span>disallow_overqualified_elements</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">csshint.</span>disallow_quotes_in_url</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">csshint.</span>display_property_grouping</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">csshint.</span>duplicate_background_images</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">csshint.</span>duplicate_properties</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">csshint.</span>empty_rules</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">csshint.</span>fallback_colors</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">csshint.</span>floats</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">csshint.</span>font_face</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">csshint.</span>font_sizes</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">csshint.</span>gradients</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">csshint.</span>hex_color</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">csshint.</span>horizontal_vertical_position</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">csshint.</span>ids</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">csshint.</span>import</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">csshint.</span>leading_zero</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">csshint.</span>max_length</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">csshint.</span>max_selector_nesting_level</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">csshint.</span>no_bom</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">csshint.</span>omit_protocol_in_url</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">csshint.</span>outline_none</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">csshint.</span>prefixes</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">csshint.</span>property_not_existed</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">csshint.</span>qualified_headings</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">csshint.</span>regex_selectors</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">csshint.</span>require_after_space</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">csshint.</span>require_around_space</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">csshint.</span>require_before_space</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">csshint.</span>require_doublequotes</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">csshint.</span>require_newline</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">csshint.</span>require_number</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">csshint.</span>require_transition_property</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">csshint.</span>shorthand</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">csshint.</span>star_property_hack</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">csshint.</span>text_indent</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">csshint.</span>underscore_property_hack</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">csshint.</span>unifying_color_case_sensitive</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">csshint.</span>unifying_font_family_case_sensitive</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">csshint.</span>unique_headings</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">csshint.</span>universal_selector</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">csshint.</span>unqualified_attributes</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">csshint.</span>util</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">csshint.</span>zero_unit</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.csshint.adjoining_classes">module csshint.adjoining_classes</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.adjoining_classes.check">
+            function <span class="apidocSignatureSpan">csshint.adjoining_classes.</span>check
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.csshint.always_semicolon">module csshint.always_semicolon</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.always_semicolon.check">
+            function <span class="apidocSignatureSpan">csshint.always_semicolon.</span>check
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.csshint.block_indent">module csshint.block_indent</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.block_indent.check">
+            function <span class="apidocSignatureSpan">csshint.block_indent.</span>check
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.csshint.box_model">module csshint.box_model</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.box_model.check">
+            function <span class="apidocSignatureSpan">csshint.box_model.</span>check
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.csshint.box_sizing">module csshint.box_sizing</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.box_sizing.check">
+            function <span class="apidocSignatureSpan">csshint.box_sizing.</span>check
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.csshint.bulletproof_font_face">module csshint.bulletproof_font_face</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.bulletproof_font_face.check">
+            function <span class="apidocSignatureSpan">csshint.bulletproof_font_face.</span>check
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.csshint.cli">module csshint.cli</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.cli.parse">
+            function <span class="apidocSignatureSpan">csshint.cli.</span>parse
+            <span class="apidocSignatureSpan">(args)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.csshint.config">module csshint.config</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.config.loadConfig">
+            function <span class="apidocSignatureSpan">csshint.config.</span>loadConfig
+            <span class="apidocSignatureSpan">(filePath, refresh)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.csshint.disallow_expression">module csshint.disallow_expression</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.disallow_expression.check">
+            function <span class="apidocSignatureSpan">csshint.disallow_expression.</span>check
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.csshint.disallow_important">module csshint.disallow_important</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.disallow_important.check">
+            function <span class="apidocSignatureSpan">csshint.disallow_important.</span>check
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.csshint.disallow_named_color">module csshint.disallow_named_color</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.disallow_named_color.check">
+            function <span class="apidocSignatureSpan">csshint.disallow_named_color.</span>check
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.csshint.disallow_overqualified_elements">module csshint.disallow_overqualified_elements</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.disallow_overqualified_elements.check">
+            function <span class="apidocSignatureSpan">csshint.disallow_overqualified_elements.</span>check
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.csshint.disallow_quotes_in_url">module csshint.disallow_quotes_in_url</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.disallow_quotes_in_url.check">
+            function <span class="apidocSignatureSpan">csshint.disallow_quotes_in_url.</span>check
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.csshint.display_property_grouping">module csshint.display_property_grouping</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.display_property_grouping.check">
+            function <span class="apidocSignatureSpan">csshint.display_property_grouping.</span>check
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.csshint.duplicate_background_images">module csshint.duplicate_background_images</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.duplicate_background_images.check">
+            function <span class="apidocSignatureSpan">csshint.duplicate_background_images.</span>check
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.csshint.duplicate_properties">module csshint.duplicate_properties</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.duplicate_properties.check">
+            function <span class="apidocSignatureSpan">csshint.duplicate_properties.</span>check
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.csshint.empty_rules">module csshint.empty_rules</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.empty_rules.check">
+            function <span class="apidocSignatureSpan">csshint.empty_rules.</span>check
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.csshint.fallback_colors">module csshint.fallback_colors</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.fallback_colors.check">
+            function <span class="apidocSignatureSpan">csshint.fallback_colors.</span>check
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.csshint.floats">module csshint.floats</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.floats.check">
+            function <span class="apidocSignatureSpan">csshint.floats.</span>check
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.csshint.font_face">module csshint.font_face</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.font_face.check">
+            function <span class="apidocSignatureSpan">csshint.font_face.</span>check
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.csshint.font_sizes">module csshint.font_sizes</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.font_sizes.check">
+            function <span class="apidocSignatureSpan">csshint.font_sizes.</span>check
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.csshint.gradients">module csshint.gradients</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.gradients.check">
+            function <span class="apidocSignatureSpan">csshint.gradients.</span>check
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.csshint.hex_color">module csshint.hex_color</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.hex_color.check">
+            function <span class="apidocSignatureSpan">csshint.hex_color.</span>check
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.csshint.horizontal_vertical_position">module csshint.horizontal_vertical_position</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.horizontal_vertical_position.check">
+            function <span class="apidocSignatureSpan">csshint.horizontal_vertical_position.</span>check
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.csshint.ids">module csshint.ids</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.ids.check">
+            function <span class="apidocSignatureSpan">csshint.ids.</span>check
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.csshint.import">module csshint.import</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.import.check">
+            function <span class="apidocSignatureSpan">csshint.import.</span>check
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.csshint.leading_zero">module csshint.leading_zero</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.leading_zero.check">
+            function <span class="apidocSignatureSpan">csshint.leading_zero.</span>check
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.csshint.max_length">module csshint.max_length</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.max_length.check">
+            function <span class="apidocSignatureSpan">csshint.max_length.</span>check
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.csshint.max_selector_nesting_level">module csshint.max_selector_nesting_level</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.max_selector_nesting_level.check">
+            function <span class="apidocSignatureSpan">csshint.max_selector_nesting_level.</span>check
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.csshint.no_bom">module csshint.no_bom</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.no_bom.check">
+            function <span class="apidocSignatureSpan">csshint.no_bom.</span>check
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.csshint.omit_protocol_in_url">module csshint.omit_protocol_in_url</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.omit_protocol_in_url.check">
+            function <span class="apidocSignatureSpan">csshint.omit_protocol_in_url.</span>check
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.csshint.outline_none">module csshint.outline_none</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.outline_none.check">
+            function <span class="apidocSignatureSpan">csshint.outline_none.</span>check
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.csshint.prefixes">module csshint.prefixes</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.prefixes.getPrefixList">
+            function <span class="apidocSignatureSpan">csshint.prefixes.</span>getPrefixList
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.prefixes.getPrefixMap">
+            function <span class="apidocSignatureSpan">csshint.prefixes.</span>getPrefixMap
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.csshint.property_not_existed">module csshint.property_not_existed</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.property_not_existed.check">
+            function <span class="apidocSignatureSpan">csshint.property_not_existed.</span>check
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.csshint.qualified_headings">module csshint.qualified_headings</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.qualified_headings.check">
+            function <span class="apidocSignatureSpan">csshint.qualified_headings.</span>check
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.csshint.regex_selectors">module csshint.regex_selectors</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.regex_selectors.check">
+            function <span class="apidocSignatureSpan">csshint.regex_selectors.</span>check
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.csshint.require_after_space">module csshint.require_after_space</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.require_after_space.check">
+            function <span class="apidocSignatureSpan">csshint.require_after_space.</span>check
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.csshint.require_around_space">module csshint.require_around_space</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.require_around_space.check">
+            function <span class="apidocSignatureSpan">csshint.require_around_space.</span>check
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.csshint.require_before_space">module csshint.require_before_space</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.require_before_space.check">
+            function <span class="apidocSignatureSpan">csshint.require_before_space.</span>check
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.csshint.require_doublequotes">module csshint.require_doublequotes</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.require_doublequotes.check">
+            function <span class="apidocSignatureSpan">csshint.require_doublequotes.</span>check
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.csshint.require_newline">module csshint.require_newline</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.require_newline.check">
+            function <span class="apidocSignatureSpan">csshint.require_newline.</span>check
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.csshint.require_number">module csshint.require_number</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.require_number.check">
+            function <span class="apidocSignatureSpan">csshint.require_number.</span>check
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.csshint.require_transition_property">module csshint.require_transition_property</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.require_transition_property.check">
+            function <span class="apidocSignatureSpan">csshint.require_transition_property.</span>check
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.csshint.shorthand">module csshint.shorthand</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.shorthand.check">
+            function <span class="apidocSignatureSpan">csshint.shorthand.</span>check
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.csshint.star_property_hack">module csshint.star_property_hack</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.star_property_hack.check">
+            function <span class="apidocSignatureSpan">csshint.star_property_hack.</span>check
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.csshint.text_indent">module csshint.text_indent</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.text_indent.check">
+            function <span class="apidocSignatureSpan">csshint.text_indent.</span>check
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.csshint.underscore_property_hack">module csshint.underscore_property_hack</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.underscore_property_hack.check">
+            function <span class="apidocSignatureSpan">csshint.underscore_property_hack.</span>check
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.csshint.unifying_color_case_sensitive">module csshint.unifying_color_case_sensitive</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.unifying_color_case_sensitive.check">
+            function <span class="apidocSignatureSpan">csshint.unifying_color_case_sensitive.</span>check
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.csshint.unifying_font_family_case_sensitive">module csshint.unifying_font_family_case_sensitive</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.unifying_font_family_case_sensitive.check">
+            function <span class="apidocSignatureSpan">csshint.unifying_font_family_case_sensitive.</span>check
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.csshint.unique_headings">module csshint.unique_headings</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.unique_headings.check">
+            function <span class="apidocSignatureSpan">csshint.unique_headings.</span>check
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.csshint.universal_selector">module csshint.universal_selector</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.universal_selector.check">
+            function <span class="apidocSignatureSpan">csshint.universal_selector.</span>check
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.csshint.unqualified_attributes">module csshint.unqualified_attributes</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.unqualified_attributes.check">
+            function <span class="apidocSignatureSpan">csshint.unqualified_attributes.</span>check
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.csshint.util">module csshint.util</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.util.changeColorByIndex">
+            function <span class="apidocSignatureSpan">csshint.util.</span>changeColorByIndex
+            <span class="apidocSignatureSpan">(source, startIndex, colorStr)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.util.changeColorByStartAndEndIndex">
+            function <span class="apidocSignatureSpan">csshint.util.</span>changeColorByStartAndEndIndex
+            <span class="apidocSignatureSpan">(source)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.util.formatMsg">
+            function <span class="apidocSignatureSpan">csshint.util.</span>formatMsg
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.util.getCandidates">
+            function <span class="apidocSignatureSpan">csshint.util.</span>getCandidates
+            <span class="apidocSignatureSpan">(args, patterns)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.util.getIgnorePatterns">
+            function <span class="apidocSignatureSpan">csshint.util.</span>getIgnorePatterns
+            <span class="apidocSignatureSpan">(file)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.util.getLineContent">
+            function <span class="apidocSignatureSpan">csshint.util.</span>getLineContent
+            <span class="apidocSignatureSpan">(line, fileData, isReplaceSpace)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.util.getPropertyValue">
+            function <span class="apidocSignatureSpan">csshint.util.</span>getPropertyValue
+            <span class="apidocSignatureSpan">(text)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.util.isIgnored">
+            function <span class="apidocSignatureSpan">csshint.util.</span>isIgnored
+            <span class="apidocSignatureSpan">(file)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.util.trim">
+            function <span class="apidocSignatureSpan">csshint.util.</span>trim
+            <span class="apidocSignatureSpan">(source)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.csshint.zero_unit">module csshint.zero_unit</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.csshint.zero_unit.check">
+            function <span class="apidocSignatureSpan">csshint.zero_unit.</span>check
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.csshint" id="apidoc.module.csshint">module csshint</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.check" id="apidoc.element.csshint.check">
+        function <span class="apidocSignatureSpan">csshint.</span>check
+        <span class="apidocSignatureSpan">(file, errors, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function check(file, errors, done) {
+    // .csshintignore ä¸­é…ç½®çš„æ–‡ä»¶æ˜¯æŒ‡å¯ä»¥å¿½ç•¥ csshint çš„æ–‡ä»¶
+    if ((0, _util.isIgnored)(file.path, '.csshintignore')) {
+        done();
+        return;
+    }
+
+<span class="apidocCodeCommentSpan">    /**
+     * checkString çš„ promise çš„ reject å’Œ resolve çš„è¿”å›žå€¼çš„ç»“æž„ä»¥åŠå¤„ç†æ–¹å¼éƒ½æ˜¯ä¸€æ&nbsp;·çš„
+     * reject æŒ‡çš„æ˜¯ CssSyntaxError çš„é”™è¯¯ã€‚
+     * resolve ä»£è¡¨çš„æ˜¯ csshint æ£€æµ‹å‡ºæ¥çš„é—®é¢˜
+     *
+     * @param {Array.&lt;Object&gt;} invalidList é”™è¯¯ä¿¡æ¯é›†åˆ
+     */
+</span>    var callback = function callback(invalidList) {
+        if (invalidList.length) {
+            invalidList.forEach(function (invalid) {
+                errors.push({
+                    path: invalid.path,
+                    messages: invalid.messages
+                });
+            });
+        }
+        done();
+    };
+
+    return checkString(file.content, file.path, (0, _objectAssign2.default)({}, (0, _config.loadConfig)(file.path, true))).then(
+callback).catch(callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.checkString" id="apidoc.element.csshint.checkString">
+        function <span class="apidocSignatureSpan">csshint.</span>checkString
+        <span class="apidocSignatureSpan">(fileContent, filePath)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function checkString(fileContent, filePath) {
+    var rcConfig = arguments.length &gt; 2 &amp;&amp; arguments[2] !== undefined ? arguments[2] : DEFAULT_CONFIG;
+
+
+    global.CSSHINT_FONTFAMILY_CASE_FLAG = {};
+
+    // è¿™é‡ŒæŠŠæ–‡ä»¶å†…å®¹çš„ \r\n ç»Ÿä¸€æ›¿æ¢æˆ \nï¼Œä¾¿äºŽä¹‹åŽèŽ·å–è¡Œå·
+    fileContent = fileContent.replace(/\r\n?/g, '\n');
+
+    // è¡Œå†…æ³¨é‡Šæ”¹å˜è§„åˆ™é…ç½®
+    var inline = analyzeInlineRule(fileContent, rcConfig);
+
+    // è¡Œå†…æ³¨é‡Šå–æ¶ˆè§„åˆ™é…ç½®
+    var inlineDisable = analyzeInlineDisableRule(fileContent, rcConfig);
+
+    var realConfig = _edpCore.util.extend({}, rcConfig, inline, inlineDisable);
+
+    var maxError = parseInt(realConfig['max-error'], 10);
+
+    // maxError ä¸º 0 æˆ–è€…éžæ•°å­—çš„æƒ…å†µï¼Œåˆ™è¡¨ç¤ºå¿½ç•¥ maxError å³æ˜¯æœ€å¤§å€¼
+    if (isNaN(maxError) || maxError === 0) {
+        maxError = Number.MAX_VALUE;
+    }
+
+    // postcss æ’ä»¶é›†åˆå³è§„åˆ™æ£€æµ‹çš„æ–‡ä»¶é›†åˆ
+    var plugins = [];
+
+    Object.getOwnPropertyNames(realConfig).forEach(function (prop) {
+        var ruleFilePath = (0, _path.join)(ruleDir, prop) + '.js';
+        if ((0, _fs.existsSync)(ruleFilePath)) {
+            plugins.push(require((0, _path.join)(ruleDir, prop)).check({
+                ruleVal: realConfig[prop],
+                // å®žé™…ä¸Šåœ¨ postcss çš„ plugin é‡Œé¢é€šè¿‡ node.source.input.css ä¹Ÿå¯ä»¥æ‹¿åˆ°æ–‡ä»¶å†…å®¹
+                // ä½†æ˜¯é€šè¿‡è¿™ç§æ–¹å¼æ‹¿åˆ°çš„å†…å®¹æ˜¯åŽ»æŽ‰ BOM çš„ï¼Œå›&nbsp;æ­¤åœ¨æ£€æµ‹ no-bom è§„åˆ™æ—¶å€™ä¼šæœ‰é—®é¢˜
+                // æ‰€ä»¥è¿™é‡ŒæŠŠæ–‡ä»¶çš„åŽŸå†…å®¹ä¼&nbsp;å…¥è¿›åŽ»
+                fileContent: fileContent,
+                filePath: filePath,
+                maxError: maxError
+            }));
+        }
+    });
+
+    // ä¸åˆæ³•çš„ä¿¡æ¯é›†åˆ
+    var invalidList = [];
+
+    var invalid = {
+        path: '',
+        messages: []
+    };
+
+    var checkPromise = new Promise(function (resolve, reject) {
+        (0, _postcss2.default)(plugins).process(fileContent).then(function (result) {
+            result.warnings().forEach(function (data) {
+                invalid.messages.push({
+                    ruleName: data.ruleName,
+                    line: data.line,
+                    col: data.col,
+                    errorChar: data.errorChar || '',
+                    message: data.message,
+                    colorMessage: data.colorMessage
+                });
+                if (invalid.path !== filePath) {
+                    invalid.path = filePath;
+                    invalidList.push(invalid);
+                }
+            });
+            resolve(invalidList);
+        }).catch(function (e) {
+            var line = e.line;
+            // æ&nbsp;¹æ® line æ˜¯å¦å­˜åœ¨æ¥åˆ¤æ–­æ˜¯ css parse çš„é”™è¯¯è¿˜æ˜¯ç¨‹åºçš„é”™è¯¯
+<span class="apidocCodeCommentSpan">            /* istanbul ignore else */
+</span>            if (line) {
+                var lineContent = (0, _util.getLineContent)(e.line, fileContent) || '';
+                invalid.messages.push({
+                    line: e.line,
+                    col: e.column,
+                    message: '' + 'CssSyntaxError: ' + e.message,
+                    colorMessage: '' + _chalk2.default.red('CssSyntaxError &lt;' + e.reason + '&gt;: ') + _chalk2.default.grey((0, _util
+.changeColorByIndex)(lineContent, 0, lineContent.substring(0, e.column - 1)))
+                });
+            } else {
+                var str = e.toString();
+                invalid.messages.push({
+                    message: str,
+                    colorMessage: _chalk2.default.red(str)
+                });
+            }
+
+            if (invalid.path !== filePath) {
+                invalid.path = filePath;
+                invalidList.push(invalid);
+            }
+
+            reject(invalidList);
+        });
+    });
+
+    return checkPromise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	     * @return {Promise} Promise Object
+	     * reject and resolve arguments:
+	     * {
+	     * 		path: {string} file path
+	     * 		messages: {Array.&lt;Object&gt;} warning messages, [{ruleName, line, col, errorChar, message, colorMessage}]
+	     * }
+	     */
+	    exports.<span class="apidocCodeKeywordSpan">checkString</span>(fileContent, config);
+
+
+	    /**
+	     * detect file
+	     *
+	     * @param {Object} file the object has path and content key
+	     * @param {Array} errors warning messages
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.csshint.adjoining_classes" id="apidoc.module.csshint.adjoining_classes">module csshint.adjoining_classes</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.adjoining_classes.check" id="apidoc.element.csshint.adjoining_classes.check">
+        function <span class="apidocSignatureSpan">csshint.adjoining_classes.</span>check
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function creator() {
+  var transformer = initializer.apply(undefined, arguments);
+  transformer.postcssPlugin = name;
+  transformer.postcssVersion = new _processor2.default().version;
+  return transformer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.csshint.always_semicolon" id="apidoc.module.csshint.always_semicolon">module csshint.always_semicolon</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.always_semicolon.check" id="apidoc.element.csshint.always_semicolon.check">
+        function <span class="apidocSignatureSpan">csshint.always_semicolon.</span>check
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function creator() {
+  var transformer = initializer.apply(undefined, arguments);
+  transformer.postcssPlugin = name;
+  transformer.postcssVersion = new _processor2.default().version;
+  return transformer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.csshint.block_indent" id="apidoc.module.csshint.block_indent">module csshint.block_indent</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.block_indent.check" id="apidoc.element.csshint.block_indent.check">
+        function <span class="apidocSignatureSpan">csshint.block_indent.</span>check
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function creator() {
+  var transformer = initializer.apply(undefined, arguments);
+  transformer.postcssPlugin = name;
+  transformer.postcssVersion = new _processor2.default().version;
+  return transformer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.csshint.box_model" id="apidoc.module.csshint.box_model">module csshint.box_model</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.box_model.check" id="apidoc.element.csshint.box_model.check">
+        function <span class="apidocSignatureSpan">csshint.box_model.</span>check
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function creator() {
+  var transformer = initializer.apply(undefined, arguments);
+  transformer.postcssPlugin = name;
+  transformer.postcssVersion = new _processor2.default().version;
+  return transformer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.csshint.box_sizing" id="apidoc.module.csshint.box_sizing">module csshint.box_sizing</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.box_sizing.check" id="apidoc.element.csshint.box_sizing.check">
+        function <span class="apidocSignatureSpan">csshint.box_sizing.</span>check
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function creator() {
+  var transformer = initializer.apply(undefined, arguments);
+  transformer.postcssPlugin = name;
+  transformer.postcssVersion = new _processor2.default().version;
+  return transformer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.csshint.bulletproof_font_face" id="apidoc.module.csshint.bulletproof_font_face">module csshint.bulletproof_font_face</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.bulletproof_font_face.check" id="apidoc.element.csshint.bulletproof_font_face.check">
+        function <span class="apidocSignatureSpan">csshint.bulletproof_font_face.</span>check
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function creator() {
+  var transformer = initializer.apply(undefined, arguments);
+  transformer.postcssPlugin = name;
+  transformer.postcssVersion = new _processor2.default().version;
+  return transformer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.csshint.cli" id="apidoc.module.csshint.cli">module csshint.cli</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.cli.parse" id="apidoc.element.csshint.cli.parse">
+        function <span class="apidocSignatureSpan">csshint.cli.</span>parse
+        <span class="apidocSignatureSpan">(args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function parse(args) {
+    args = args.slice(2);
+
+    // ä¸å¸¦å‚æ•°æ—¶ï¼Œé»˜è®¤æ£€æµ‹å½“å‰ç›®å½•ä¸‹æ‰€æœ‰çš„ css æ–‡ä»¶
+    if (args.length === 0) {
+        args.push('.');
+    }
+
+    if (args[0] === '--version' || args[0] === '-v') {
+        showDefaultInfo();
+        return;
+    }
+
+    var patterns = ['**<span class="apidocCodeCommentSpan">/*.css', '!**/{output,test,node_modules,asset,dist,release,doc,dep,report}/**'];
+
+    var candidates = (0, _util.getCandidates)(args, patterns);
+    var count = candidates.length;
+
+    if (!count) {
+        return;
+    }
+
+    // é”™è¯¯ä¿¡æ¯çš„é›†åˆ
+    var errors = [];
+
+    /**
+     * æ¯ä¸ªæ–‡ä»¶çš„æ&nbsp;¡éªŒç»“æžœå›žè°ƒï¼Œä¸»è¦ç”¨äºŽç»Ÿè®¡æ&nbsp;¡éªŒå®Œæˆæƒ…å†µ
+     *
+     * @inner
+     */
+</span>    var callback = function callback() {
+        count--;
+        if (!count) {
+            report(errors);
+        }
+    };
+
+    // éåŽ†æ¯ä¸ªéœ€è¦æ£€æµ‹çš„ css æ–‡ä»¶
+    candidates.forEach(function (candidate) {
+        var readable = (0, _fs.createReadStream)(candidate, {
+            encoding: 'utf8'
+        });
+        readable.on('data', function (chunk) {
+            var file = {
+                content: chunk,
+                path: candidate
+            };
+            (0, _checker.check)(file, errors, callback);
+        });
+        readable.on('error', function (err) {
+            throw err;
+        });
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    return '';
+}
+var ret = void 0;
+try {
+    ret = _jsYaml2.default.load(content);
+} catch (e) {}
+// if (basename(filePath) === '.csshintrc') {
+//     return JSON.<span class="apidocCodeKeywordSpan">parse</span>(stripJSONComments(content));
+// }
+//
+// let match = filePath.match(JSON_YAML_REG);
+//
+// if (match) {
+//     let suffix = match[1];
+//     if (suffix === 'json') {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.csshint.config" id="apidoc.module.csshint.config">module csshint.config</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.config.loadConfig" id="apidoc.element.csshint.config.loadConfig">
+        function <span class="apidocSignatureSpan">csshint.config.</span>loadConfig
+        <span class="apidocSignatureSpan">(filePath, refresh)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function loadConfig(filePath, refresh) {
+    if (!refresh &amp;&amp; STORAGE) {
+        return STORAGE;
+    }
+
+    var manis = new _manis2.default({
+        files: ['.csshintrc'],
+        loader: function loader(content) {
+            if (!content) {
+                return '';
+            }
+            var ret = void 0;
+            try {
+                ret = _jsYaml2.default.load(content);
+            } catch (e) {}
+            // if (basename(filePath) === '.csshintrc') {
+            //     return JSON.parse(stripJSONComments(content));
+            // }
+            //
+            // let match = filePath.match(JSON_YAML_REG);
+            //
+            // if (match) {
+            //     let suffix = match[1];
+            //     if (suffix === 'json') {
+            //         return JSON.parse(stripJSONComments(content));
+            //     }
+            //     else if (suffix === 'yml') {
+            //         return yaml.load(content);
+            //     }
+            // }
+            return ret;
+        }
+    });
+
+    manis.setDefault((0, _path.join)(__dirname, './csshint.yml'));
+
+    STORAGE = manis.from(filePath);
+
+    return STORAGE;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.csshint.disallow_expression" id="apidoc.module.csshint.disallow_expression">module csshint.disallow_expression</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.disallow_expression.check" id="apidoc.element.csshint.disallow_expression.check">
+        function <span class="apidocSignatureSpan">csshint.disallow_expression.</span>check
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function creator() {
+  var transformer = initializer.apply(undefined, arguments);
+  transformer.postcssPlugin = name;
+  transformer.postcssVersion = new _processor2.default().version;
+  return transformer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.csshint.disallow_important" id="apidoc.module.csshint.disallow_important">module csshint.disallow_important</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.disallow_important.check" id="apidoc.element.csshint.disallow_important.check">
+        function <span class="apidocSignatureSpan">csshint.disallow_important.</span>check
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function creator() {
+  var transformer = initializer.apply(undefined, arguments);
+  transformer.postcssPlugin = name;
+  transformer.postcssVersion = new _processor2.default().version;
+  return transformer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.csshint.disallow_named_color" id="apidoc.module.csshint.disallow_named_color">module csshint.disallow_named_color</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.disallow_named_color.check" id="apidoc.element.csshint.disallow_named_color.check">
+        function <span class="apidocSignatureSpan">csshint.disallow_named_color.</span>check
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function creator() {
+  var transformer = initializer.apply(undefined, arguments);
+  transformer.postcssPlugin = name;
+  transformer.postcssVersion = new _processor2.default().version;
+  return transformer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.csshint.disallow_overqualified_elements" id="apidoc.module.csshint.disallow_overqualified_elements">module csshint.disallow_overqualified_elements</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.disallow_overqualified_elements.check" id="apidoc.element.csshint.disallow_overqualified_elements.check">
+        function <span class="apidocSignatureSpan">csshint.disallow_overqualified_elements.</span>check
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function creator() {
+  var transformer = initializer.apply(undefined, arguments);
+  transformer.postcssPlugin = name;
+  transformer.postcssVersion = new _processor2.default().version;
+  return transformer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.csshint.disallow_quotes_in_url" id="apidoc.module.csshint.disallow_quotes_in_url">module csshint.disallow_quotes_in_url</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.disallow_quotes_in_url.check" id="apidoc.element.csshint.disallow_quotes_in_url.check">
+        function <span class="apidocSignatureSpan">csshint.disallow_quotes_in_url.</span>check
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function creator() {
+  var transformer = initializer.apply(undefined, arguments);
+  transformer.postcssPlugin = name;
+  transformer.postcssVersion = new _processor2.default().version;
+  return transformer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.csshint.display_property_grouping" id="apidoc.module.csshint.display_property_grouping">module csshint.display_property_grouping</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.display_property_grouping.check" id="apidoc.element.csshint.display_property_grouping.check">
+        function <span class="apidocSignatureSpan">csshint.display_property_grouping.</span>check
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function creator() {
+  var transformer = initializer.apply(undefined, arguments);
+  transformer.postcssPlugin = name;
+  transformer.postcssVersion = new _processor2.default().version;
+  return transformer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.csshint.duplicate_background_images" id="apidoc.module.csshint.duplicate_background_images">module csshint.duplicate_background_images</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.duplicate_background_images.check" id="apidoc.element.csshint.duplicate_background_images.check">
+        function <span class="apidocSignatureSpan">csshint.duplicate_background_images.</span>check
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function creator() {
+  var transformer = initializer.apply(undefined, arguments);
+  transformer.postcssPlugin = name;
+  transformer.postcssVersion = new _processor2.default().version;
+  return transformer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.csshint.duplicate_properties" id="apidoc.module.csshint.duplicate_properties">module csshint.duplicate_properties</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.duplicate_properties.check" id="apidoc.element.csshint.duplicate_properties.check">
+        function <span class="apidocSignatureSpan">csshint.duplicate_properties.</span>check
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function creator() {
+  var transformer = initializer.apply(undefined, arguments);
+  transformer.postcssPlugin = name;
+  transformer.postcssVersion = new _processor2.default().version;
+  return transformer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.csshint.empty_rules" id="apidoc.module.csshint.empty_rules">module csshint.empty_rules</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.empty_rules.check" id="apidoc.element.csshint.empty_rules.check">
+        function <span class="apidocSignatureSpan">csshint.empty_rules.</span>check
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function creator() {
+  var transformer = initializer.apply(undefined, arguments);
+  transformer.postcssPlugin = name;
+  transformer.postcssVersion = new _processor2.default().version;
+  return transformer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.csshint.fallback_colors" id="apidoc.module.csshint.fallback_colors">module csshint.fallback_colors</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.fallback_colors.check" id="apidoc.element.csshint.fallback_colors.check">
+        function <span class="apidocSignatureSpan">csshint.fallback_colors.</span>check
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function creator() {
+  var transformer = initializer.apply(undefined, arguments);
+  transformer.postcssPlugin = name;
+  transformer.postcssVersion = new _processor2.default().version;
+  return transformer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.csshint.floats" id="apidoc.module.csshint.floats">module csshint.floats</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.floats.check" id="apidoc.element.csshint.floats.check">
+        function <span class="apidocSignatureSpan">csshint.floats.</span>check
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function creator() {
+  var transformer = initializer.apply(undefined, arguments);
+  transformer.postcssPlugin = name;
+  transformer.postcssVersion = new _processor2.default().version;
+  return transformer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.csshint.font_face" id="apidoc.module.csshint.font_face">module csshint.font_face</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.font_face.check" id="apidoc.element.csshint.font_face.check">
+        function <span class="apidocSignatureSpan">csshint.font_face.</span>check
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function creator() {
+  var transformer = initializer.apply(undefined, arguments);
+  transformer.postcssPlugin = name;
+  transformer.postcssVersion = new _processor2.default().version;
+  return transformer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.csshint.font_sizes" id="apidoc.module.csshint.font_sizes">module csshint.font_sizes</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.font_sizes.check" id="apidoc.element.csshint.font_sizes.check">
+        function <span class="apidocSignatureSpan">csshint.font_sizes.</span>check
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function creator() {
+  var transformer = initializer.apply(undefined, arguments);
+  transformer.postcssPlugin = name;
+  transformer.postcssVersion = new _processor2.default().version;
+  return transformer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.csshint.gradients" id="apidoc.module.csshint.gradients">module csshint.gradients</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.gradients.check" id="apidoc.element.csshint.gradients.check">
+        function <span class="apidocSignatureSpan">csshint.gradients.</span>check
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function creator() {
+  var transformer = initializer.apply(undefined, arguments);
+  transformer.postcssPlugin = name;
+  transformer.postcssVersion = new _processor2.default().version;
+  return transformer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.csshint.hex_color" id="apidoc.module.csshint.hex_color">module csshint.hex_color</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.hex_color.check" id="apidoc.element.csshint.hex_color.check">
+        function <span class="apidocSignatureSpan">csshint.hex_color.</span>check
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function creator() {
+  var transformer = initializer.apply(undefined, arguments);
+  transformer.postcssPlugin = name;
+  transformer.postcssVersion = new _processor2.default().version;
+  return transformer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.csshint.horizontal_vertical_position" id="apidoc.module.csshint.horizontal_vertical_position">module csshint.horizontal_vertical_position</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.horizontal_vertical_position.check" id="apidoc.element.csshint.horizontal_vertical_position.check">
+        function <span class="apidocSignatureSpan">csshint.horizontal_vertical_position.</span>check
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function creator() {
+  var transformer = initializer.apply(undefined, arguments);
+  transformer.postcssPlugin = name;
+  transformer.postcssVersion = new _processor2.default().version;
+  return transformer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.csshint.ids" id="apidoc.module.csshint.ids">module csshint.ids</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.ids.check" id="apidoc.element.csshint.ids.check">
+        function <span class="apidocSignatureSpan">csshint.ids.</span>check
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function creator() {
+  var transformer = initializer.apply(undefined, arguments);
+  transformer.postcssPlugin = name;
+  transformer.postcssVersion = new _processor2.default().version;
+  return transformer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.csshint.import" id="apidoc.module.csshint.import">module csshint.import</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.import.check" id="apidoc.element.csshint.import.check">
+        function <span class="apidocSignatureSpan">csshint.import.</span>check
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function creator() {
+  var transformer = initializer.apply(undefined, arguments);
+  transformer.postcssPlugin = name;
+  transformer.postcssVersion = new _processor2.default().version;
+  return transformer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.csshint.leading_zero" id="apidoc.module.csshint.leading_zero">module csshint.leading_zero</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.leading_zero.check" id="apidoc.element.csshint.leading_zero.check">
+        function <span class="apidocSignatureSpan">csshint.leading_zero.</span>check
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function creator() {
+  var transformer = initializer.apply(undefined, arguments);
+  transformer.postcssPlugin = name;
+  transformer.postcssVersion = new _processor2.default().version;
+  return transformer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.csshint.max_length" id="apidoc.module.csshint.max_length">module csshint.max_length</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.max_length.check" id="apidoc.element.csshint.max_length.check">
+        function <span class="apidocSignatureSpan">csshint.max_length.</span>check
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function creator() {
+  var transformer = initializer.apply(undefined, arguments);
+  transformer.postcssPlugin = name;
+  transformer.postcssVersion = new _processor2.default().version;
+  return transformer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.csshint.max_selector_nesting_level" id="apidoc.module.csshint.max_selector_nesting_level">module csshint.max_selector_nesting_level</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.max_selector_nesting_level.check" id="apidoc.element.csshint.max_selector_nesting_level.check">
+        function <span class="apidocSignatureSpan">csshint.max_selector_nesting_level.</span>check
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function creator() {
+  var transformer = initializer.apply(undefined, arguments);
+  transformer.postcssPlugin = name;
+  transformer.postcssVersion = new _processor2.default().version;
+  return transformer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.csshint.no_bom" id="apidoc.module.csshint.no_bom">module csshint.no_bom</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.no_bom.check" id="apidoc.element.csshint.no_bom.check">
+        function <span class="apidocSignatureSpan">csshint.no_bom.</span>check
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function creator() {
+  var transformer = initializer.apply(undefined, arguments);
+  transformer.postcssPlugin = name;
+  transformer.postcssVersion = new _processor2.default().version;
+  return transformer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.csshint.omit_protocol_in_url" id="apidoc.module.csshint.omit_protocol_in_url">module csshint.omit_protocol_in_url</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.omit_protocol_in_url.check" id="apidoc.element.csshint.omit_protocol_in_url.check">
+        function <span class="apidocSignatureSpan">csshint.omit_protocol_in_url.</span>check
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function creator() {
+  var transformer = initializer.apply(undefined, arguments);
+  transformer.postcssPlugin = name;
+  transformer.postcssVersion = new _processor2.default().version;
+  return transformer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.csshint.outline_none" id="apidoc.module.csshint.outline_none">module csshint.outline_none</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.outline_none.check" id="apidoc.element.csshint.outline_none.check">
+        function <span class="apidocSignatureSpan">csshint.outline_none.</span>check
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function creator() {
+  var transformer = initializer.apply(undefined, arguments);
+  transformer.postcssPlugin = name;
+  transformer.postcssVersion = new _processor2.default().version;
+  return transformer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.csshint.prefixes" id="apidoc.module.csshint.prefixes">module csshint.prefixes</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.prefixes.getPrefixList" id="apidoc.element.csshint.prefixes.getPrefixList">
+        function <span class="apidocSignatureSpan">csshint.prefixes.</span>getPrefixList
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getPrefixList() {
+    return allPrefixes;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.prefixes.getPrefixMap" id="apidoc.element.csshint.prefixes.getPrefixMap">
+        function <span class="apidocSignatureSpan">csshint.prefixes.</span>getPrefixMap
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getPrefixMap() {
+    return prefixes;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.csshint.property_not_existed" id="apidoc.module.csshint.property_not_existed">module csshint.property_not_existed</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.property_not_existed.check" id="apidoc.element.csshint.property_not_existed.check">
+        function <span class="apidocSignatureSpan">csshint.property_not_existed.</span>check
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function creator() {
+  var transformer = initializer.apply(undefined, arguments);
+  transformer.postcssPlugin = name;
+  transformer.postcssVersion = new _processor2.default().version;
+  return transformer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.csshint.qualified_headings" id="apidoc.module.csshint.qualified_headings">module csshint.qualified_headings</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.qualified_headings.check" id="apidoc.element.csshint.qualified_headings.check">
+        function <span class="apidocSignatureSpan">csshint.qualified_headings.</span>check
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function creator() {
+  var transformer = initializer.apply(undefined, arguments);
+  transformer.postcssPlugin = name;
+  transformer.postcssVersion = new _processor2.default().version;
+  return transformer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.csshint.regex_selectors" id="apidoc.module.csshint.regex_selectors">module csshint.regex_selectors</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.regex_selectors.check" id="apidoc.element.csshint.regex_selectors.check">
+        function <span class="apidocSignatureSpan">csshint.regex_selectors.</span>check
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function creator() {
+  var transformer = initializer.apply(undefined, arguments);
+  transformer.postcssPlugin = name;
+  transformer.postcssVersion = new _processor2.default().version;
+  return transformer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.csshint.require_after_space" id="apidoc.module.csshint.require_after_space">module csshint.require_after_space</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.require_after_space.check" id="apidoc.element.csshint.require_after_space.check">
+        function <span class="apidocSignatureSpan">csshint.require_after_space.</span>check
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function creator() {
+  var transformer = initializer.apply(undefined, arguments);
+  transformer.postcssPlugin = name;
+  transformer.postcssVersion = new _processor2.default().version;
+  return transformer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.csshint.require_around_space" id="apidoc.module.csshint.require_around_space">module csshint.require_around_space</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.require_around_space.check" id="apidoc.element.csshint.require_around_space.check">
+        function <span class="apidocSignatureSpan">csshint.require_around_space.</span>check
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function creator() {
+  var transformer = initializer.apply(undefined, arguments);
+  transformer.postcssPlugin = name;
+  transformer.postcssVersion = new _processor2.default().version;
+  return transformer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.csshint.require_before_space" id="apidoc.module.csshint.require_before_space">module csshint.require_before_space</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.require_before_space.check" id="apidoc.element.csshint.require_before_space.check">
+        function <span class="apidocSignatureSpan">csshint.require_before_space.</span>check
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function creator() {
+  var transformer = initializer.apply(undefined, arguments);
+  transformer.postcssPlugin = name;
+  transformer.postcssVersion = new _processor2.default().version;
+  return transformer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.csshint.require_doublequotes" id="apidoc.module.csshint.require_doublequotes">module csshint.require_doublequotes</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.require_doublequotes.check" id="apidoc.element.csshint.require_doublequotes.check">
+        function <span class="apidocSignatureSpan">csshint.require_doublequotes.</span>check
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function creator() {
+  var transformer = initializer.apply(undefined, arguments);
+  transformer.postcssPlugin = name;
+  transformer.postcssVersion = new _processor2.default().version;
+  return transformer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.csshint.require_newline" id="apidoc.module.csshint.require_newline">module csshint.require_newline</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.require_newline.check" id="apidoc.element.csshint.require_newline.check">
+        function <span class="apidocSignatureSpan">csshint.require_newline.</span>check
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function creator() {
+  var transformer = initializer.apply(undefined, arguments);
+  transformer.postcssPlugin = name;
+  transformer.postcssVersion = new _processor2.default().version;
+  return transformer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.csshint.require_number" id="apidoc.module.csshint.require_number">module csshint.require_number</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.require_number.check" id="apidoc.element.csshint.require_number.check">
+        function <span class="apidocSignatureSpan">csshint.require_number.</span>check
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function creator() {
+  var transformer = initializer.apply(undefined, arguments);
+  transformer.postcssPlugin = name;
+  transformer.postcssVersion = new _processor2.default().version;
+  return transformer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.csshint.require_transition_property" id="apidoc.module.csshint.require_transition_property">module csshint.require_transition_property</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.require_transition_property.check" id="apidoc.element.csshint.require_transition_property.check">
+        function <span class="apidocSignatureSpan">csshint.require_transition_property.</span>check
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function creator() {
+  var transformer = initializer.apply(undefined, arguments);
+  transformer.postcssPlugin = name;
+  transformer.postcssVersion = new _processor2.default().version;
+  return transformer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.csshint.shorthand" id="apidoc.module.csshint.shorthand">module csshint.shorthand</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.shorthand.check" id="apidoc.element.csshint.shorthand.check">
+        function <span class="apidocSignatureSpan">csshint.shorthand.</span>check
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function creator() {
+  var transformer = initializer.apply(undefined, arguments);
+  transformer.postcssPlugin = name;
+  transformer.postcssVersion = new _processor2.default().version;
+  return transformer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.csshint.star_property_hack" id="apidoc.module.csshint.star_property_hack">module csshint.star_property_hack</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.star_property_hack.check" id="apidoc.element.csshint.star_property_hack.check">
+        function <span class="apidocSignatureSpan">csshint.star_property_hack.</span>check
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function creator() {
+  var transformer = initializer.apply(undefined, arguments);
+  transformer.postcssPlugin = name;
+  transformer.postcssVersion = new _processor2.default().version;
+  return transformer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.csshint.text_indent" id="apidoc.module.csshint.text_indent">module csshint.text_indent</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.text_indent.check" id="apidoc.element.csshint.text_indent.check">
+        function <span class="apidocSignatureSpan">csshint.text_indent.</span>check
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function creator() {
+  var transformer = initializer.apply(undefined, arguments);
+  transformer.postcssPlugin = name;
+  transformer.postcssVersion = new _processor2.default().version;
+  return transformer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.csshint.underscore_property_hack" id="apidoc.module.csshint.underscore_property_hack">module csshint.underscore_property_hack</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.underscore_property_hack.check" id="apidoc.element.csshint.underscore_property_hack.check">
+        function <span class="apidocSignatureSpan">csshint.underscore_property_hack.</span>check
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function creator() {
+  var transformer = initializer.apply(undefined, arguments);
+  transformer.postcssPlugin = name;
+  transformer.postcssVersion = new _processor2.default().version;
+  return transformer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.csshint.unifying_color_case_sensitive" id="apidoc.module.csshint.unifying_color_case_sensitive">module csshint.unifying_color_case_sensitive</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.unifying_color_case_sensitive.check" id="apidoc.element.csshint.unifying_color_case_sensitive.check">
+        function <span class="apidocSignatureSpan">csshint.unifying_color_case_sensitive.</span>check
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function creator() {
+  var transformer = initializer.apply(undefined, arguments);
+  transformer.postcssPlugin = name;
+  transformer.postcssVersion = new _processor2.default().version;
+  return transformer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.csshint.unifying_font_family_case_sensitive" id="apidoc.module.csshint.unifying_font_family_case_sensitive">module csshint.unifying_font_family_case_sensitive</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.unifying_font_family_case_sensitive.check" id="apidoc.element.csshint.unifying_font_family_case_sensitive.check">
+        function <span class="apidocSignatureSpan">csshint.unifying_font_family_case_sensitive.</span>check
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function creator() {
+  var transformer = initializer.apply(undefined, arguments);
+  transformer.postcssPlugin = name;
+  transformer.postcssVersion = new _processor2.default().version;
+  return transformer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.csshint.unique_headings" id="apidoc.module.csshint.unique_headings">module csshint.unique_headings</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.unique_headings.check" id="apidoc.element.csshint.unique_headings.check">
+        function <span class="apidocSignatureSpan">csshint.unique_headings.</span>check
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function creator() {
+  var transformer = initializer.apply(undefined, arguments);
+  transformer.postcssPlugin = name;
+  transformer.postcssVersion = new _processor2.default().version;
+  return transformer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.csshint.universal_selector" id="apidoc.module.csshint.universal_selector">module csshint.universal_selector</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.universal_selector.check" id="apidoc.element.csshint.universal_selector.check">
+        function <span class="apidocSignatureSpan">csshint.universal_selector.</span>check
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function creator() {
+  var transformer = initializer.apply(undefined, arguments);
+  transformer.postcssPlugin = name;
+  transformer.postcssVersion = new _processor2.default().version;
+  return transformer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.csshint.unqualified_attributes" id="apidoc.module.csshint.unqualified_attributes">module csshint.unqualified_attributes</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.unqualified_attributes.check" id="apidoc.element.csshint.unqualified_attributes.check">
+        function <span class="apidocSignatureSpan">csshint.unqualified_attributes.</span>check
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function creator() {
+  var transformer = initializer.apply(undefined, arguments);
+  transformer.postcssPlugin = name;
+  transformer.postcssVersion = new _processor2.default().version;
+  return transformer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.csshint.util" id="apidoc.module.csshint.util">module csshint.util</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.util.changeColorByIndex" id="apidoc.element.csshint.util.changeColorByIndex">
+        function <span class="apidocSignatureSpan">csshint.util.</span>changeColorByIndex
+        <span class="apidocSignatureSpan">(source, startIndex, colorStr)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function changeColorByIndex(source, startIndex, colorStr) {
+    var ret = '';
+    if (source) {
+        var colorStrLen = colorStr.length;
+        var endIndex = startIndex + colorStrLen;
+        ret = '' + source.slice(0, startIndex) // colorStr å‰é¢çš„éƒ¨åˆ†
+        + _chalk2.default.magenta(source.slice(startIndex, endIndex)) // colorStr çš„éƒ¨åˆ†
+        + source.slice(endIndex, source.length); // colorStr åŽé¢çš„éƒ¨åˆ†
+    }
+    return ret;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.util.changeColorByStartAndEndIndex" id="apidoc.element.csshint.util.changeColorByStartAndEndIndex">
+        function <span class="apidocSignatureSpan">csshint.util.</span>changeColorByStartAndEndIndex
+        <span class="apidocSignatureSpan">(source)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function changeColorByStartAndEndIndex(source) {
+    var startIndex = arguments.length &gt; 1 &amp;&amp; arguments[1] !== undefined ? arguments[1] : 0;
+    var endIndex = arguments.length &gt; 2 &amp;&amp; arguments[2] !== undefined ? arguments[2] : 0;
+
+    if (!source) {
+        return '';
+    }
+
+    startIndex -= 1;
+    endIndex -= 1;
+
+    return '' + source.slice(0, startIndex) // colorStr å‰é¢çš„éƒ¨åˆ†
+    + _chalk2.default.magenta(source.slice(startIndex, endIndex)) // colorStr çš„éƒ¨åˆ†
+    + source.slice(endIndex, source.length); // colorStr åŽé¢çš„éƒ¨åˆ†
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.util.formatMsg" id="apidoc.element.csshint.util.formatMsg">
+        function <span class="apidocSignatureSpan">csshint.util.</span>formatMsg
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function formatMsg(msg) {
+    var spaceCount = arguments.length &gt; 1 &amp;&amp; arguments[1] !== undefined ? arguments[1] : 0;
+
+    var space = '';
+    times(spaceCount, function () {
+        space += ' ';
+    });
+    return space + msg;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.util.getCandidates" id="apidoc.element.csshint.util.getCandidates">
+        function <span class="apidocSignatureSpan">csshint.util.</span>getCandidates
+        <span class="apidocSignatureSpan">(args, patterns)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getCandidates(args, patterns) {
+    var candidates = [];
+
+    args = args.filter(function (item) {
+        return item !== '.';
+    });
+
+    if (!args.length) {
+        candidates = _edpCore.glob.sync(patterns);
+    } else {
+        var i = -1;
+        var len = args.length;
+        while (++i &lt; len) {
+            var target = args[i];
+            if (!(0, _fs.existsSync)(target)) {
+                _edpCore.log.warn('No such file or directory %s', target);
+                continue;
+            }
+
+            var stat = (0, _fs.statSync)(target);
+            if (stat.isDirectory()) {
+                target = target.replace(/[\/|\\]+$/, '');
+                candidates.push.apply(candidates, _edpCore.glob.sync(target + '/' + patterns[0]));
+            }
+<span class="apidocCodeCommentSpan">            /* istanbul ignore else */
+</span>            else if (stat.isFile()) {
+                    candidates.push(target);
+                }
+        }
+    }
+
+    return candidates;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.util.getIgnorePatterns" id="apidoc.element.csshint.util.getIgnorePatterns">
+        function <span class="apidocSignatureSpan">csshint.util.</span>getIgnorePatterns
+        <span class="apidocSignatureSpan">(file)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getIgnorePatterns(file) {
+    if (!(0, _fs.existsSync)(file)) {
+        return [];
+    }
+
+    var patterns = (0, _fs.readFileSync)(file, 'utf-8').split(/\r?\n/g);
+    return patterns.filter(function (item) {
+        return item.trim().length &gt; 0 &amp;&amp; item[0] !== '#';
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.util.getLineContent" id="apidoc.element.csshint.util.getLineContent">
+        function <span class="apidocSignatureSpan">csshint.util.</span>getLineContent
+        <span class="apidocSignatureSpan">(line, fileData, isReplaceSpace)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getLineContent(line, fileData, isReplaceSpace) {
+    var content = fileData.split('\n')[line - 1];
+    if (isReplaceSpace) {
+        content = content.replace(/\s*/, '');
+    }
+    return content;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.util.getPropertyValue" id="apidoc.element.csshint.util.getPropertyValue">
+        function <span class="apidocSignatureSpan">csshint.util.</span>getPropertyValue
+        <span class="apidocSignatureSpan">(text)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getPropertyValue(text) {
+<span class="apidocCodeCommentSpan">    /* jshint maxstatements: 71, maxcomplexity: 43 */
+</span>
+    var parts = [];
+    var arr = _postcss2.default.list.space(String(text));
+
+    for (var i = 0, len = arr.length; i &lt; len; i++) {
+        var part = {
+            text: arr[i]
+        };
+
+        var temp = void 0;
+
+        // dimension
+        if (/^([+\-]?[\d\.]+)([a-z]+)$/i.test(arr[i])) {
+            part.value = +RegExp.$1;
+            part.units = RegExp.$2;
+
+            switch (part.units.toLowerCase()) {
+                case 'em':
+                case 'rem':
+                case 'ex':
+                case 'px':
+                case 'cm':
+                case 'mm':
+                case 'in':
+                case 'pt':
+                case 'pc':
+                case 'ch':
+                case 'vh':
+                case 'vw':
+                case 'vmax':
+                case 'vmin':
+                    part.type = 'length';
+                    break;
+
+                case 'deg':
+                case 'rad':
+                case 'grad':
+                    part.type = 'angle';
+                    break;
+
+                case 'ms':
+                case 's':
+                    part.type = 'time';
+                    break;
+
+                case 'hz':
+                case 'khz':
+                    part.type = 'frequency';
+                    break;
+
+                case 'dpi':
+                case 'dpcm':
+                    part.type = 'resolution';
+                    break;
+
+                default:
+                    part.type = 'dimension';
+            }
+        }
+        // percentage
+        else if (/^([+\-]?[\d\.]+)%$/i.test(arr[i])) {
+                part.type = 'percentage';
+                part.value = +RegExp.$1;
+            }
+            // integer
+            else if (/^([+\-]?\d+)$/i.test(arr[i])) {
+                    part.type = 'integer';
+                    part.value = +RegExp.$1;
+                }
+                // number
+                else if (/^([+\-]?[\d\.]+)$/i.test(arr[i])) {
+                        part.type = 'number';
+                        part.value = +RegExp.$1;
+                    }
+                    // hexcolor
+                    else if (/^#([a-f0-9]{3,6})/i.test(arr[i])) {
+                            part.type = 'color';
+                            temp = RegExp.$1;
+                            if (temp.length === 3) {
+                                part.red = parseInt(temp.charAt(0) + temp.charAt(0), 16);
+                                part.green = parseInt(temp.charAt(1) + temp.charAt(1), 16);
+                                part.blue = parseInt(temp.charAt(2) + temp.charAt(2), 16);
+                            } else {
+                                part.red = parseInt(temp.substring(0, 2), 16);
+                                part.green = parseInt(temp.substring(2, 4), 16);
+                                part.blue = parseInt(temp.substring(4, 6), 16);
+                            }
+                        }
+                        // rgb() color with absolute numbers
+                        else if (/^rgb\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*\)/i.test(arr[i])) {
+                                part.type = 'color';
+                                part.red = +RegExp.$1;
+                                part.green = +RegExp.$2;
+                                part.blue = +RegExp.$3;
+                            }
+                            // rgb() color with percentages
+                            else if (/^rgb\(\s*(\d+)%\s*,\s*(\d+)%\s*,\s*(\d+)%\s*\)/i.test(arr[i])) {
+                                    part.type = 'color';
+                                    part.red = +RegExp.$1 * 255 / 100;
+                                    part.green = +RegExp.$2 * 255 / 100;
+                                    part.blue = +RegExp.$3 * 255 / 100;
+                                }
+                                // rgba() color with absolute numbers
+                                else if (/^rgba\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*,\s*([\d\.]+)\s*\)/i.test(arr[i])) { ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.util.isIgnored" id="apidoc.element.csshint.util.isIgnored">
+        function <span class="apidocSignatureSpan">csshint.util.</span>isIgnored
+        <span class="apidocSignatureSpan">(file)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isIgnored(file) {
+    var name = arguments.length &gt; 1 &amp;&amp; arguments[1] !== undefined ? arguments[1] : '.csshintignore';
+
+    var ignorePatterns = null;
+
+    file = _edpCore.path.resolve(file);
+
+    var key = name + '@' + _edpCore.path.dirname(file);
+    if (_IGNORE_CACHE[key]) {
+        ignorePatterns = _IGNORE_CACHE[key];
+    } else {
+        var options = {
+            name: name,
+            factory: function factory(item) {
+                var config = {};
+                getIgnorePatterns(item).forEach(function (line) {
+                    config[line] = true;
+                });
+                return config;
+            }
+        };
+        ignorePatterns = _edpCore.util.getConfig(_edpCore.path.dirname(file), options);
+
+        _IGNORE_CACHE[key] = ignorePatterns;
+    }
+
+    var bizOrPkgRoot = process.cwd();
+
+    try {
+        bizOrPkgRoot = _edpCore.path.getRootDirectory();
+    } catch (ex) {}
+
+    var dirname = _edpCore.path.relative(bizOrPkgRoot, file);
+    var isMatch = _edpCore.glob.match(dirname, Object.keys(ignorePatterns));
+
+    return isMatch;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.util.trim" id="apidoc.element.csshint.util.trim">
+        function <span class="apidocSignatureSpan">csshint.util.</span>trim
+        <span class="apidocSignatureSpan">(source)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function trim(source) {
+    if (!source) {
+        return '';
+    }
+
+    return String(source).replace(WHITESPACE, '');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+function getIgnorePatterns(file) {
+   if (!(0, _fs.existsSync)(file)) {
+       return [];
+   }
+
+   var patterns = (0, _fs.readFileSync)(file, 'utf-8').split(/\r?\n/g);
+   return patterns.filter(function (item) {
+       return item.<span class="apidocCodeKeywordSpan">trim</span>().length &gt; 0 &amp;&amp; item[0] !== '#';
+   });
+}
+
+var _IGNORE_CACHE = {};
+
+/**
+* åˆ¤æ–­ä¸€ä¸‹æ˜¯å¦åº”è¯¥å¿½ç•¥è¿™ä¸ªæ–‡ä»¶.
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.csshint.zero_unit" id="apidoc.module.csshint.zero_unit">module csshint.zero_unit</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.csshint.zero_unit.check" id="apidoc.element.csshint.zero_unit.check">
+        function <span class="apidocSignatureSpan">csshint.zero_unit.</span>check
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function creator() {
+  var transformer = initializer.apply(undefined, arguments);
+  transformer.postcssPlugin = name;
+  transformer.postcssVersion = new _processor2.default().version;
+  return transformer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
